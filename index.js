@@ -1,15 +1,13 @@
-var fs = require('fs');
-var http2 = require('http2');
+const http2 = require('http2');
+const fs = require('fs');
+const port = process.env.PORT || 9000;
 
-var port = process.env.PORT || 9000;
-
-var options = {
+const options = {
     key: fs.readFileSync('./cert.com.key'),
     cert: fs.readFileSync('./cert.com.crt')
 };
 
-http2.createServer(options, function(req, res) {
-    res.end('Welcome HTTP/2.0');
+http2.createServer(options, (req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('hello world\n');
 }).listen(port);
-
-console.log('Server listening on Port %s', port);
