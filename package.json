@@ -2,9 +2,9 @@
   "name": "progressive-css-loading-http2",
   "version": "0.1.0",
   "description": "Repo for testing progressive css loading technics on HTTP/2",
-  "main": "index.js",
+  "main": "src/1/index.html",
   "scripts": {
-    "start": "node index.js"
+    "start": "caddy"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,5 @@
     "url": "https://github.com/ixisio/progressive-css-loading-http2/issues"
   },
   "homepage": "https://github.com/ixisio/progressive-css-loading-http2#readme",
-  "dependencies": {
-    "http2": "^3.3.3"
-  }
+  "dependencies": {}
 }

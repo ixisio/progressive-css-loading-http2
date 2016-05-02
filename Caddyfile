@@ -1,0 +1,4 @@
+localhost:443, 127.0.0.1:443 {
+    tls cert.crt cert.key
+    root src/
+}
